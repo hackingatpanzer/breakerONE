@@ -38,15 +38,13 @@ local ids = {
     6986372023
  }
 if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 or game.PlaceId == 10321372166 or game.PlaceId == 11725212117 then
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/scripts/PSX.lua"))()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/psx"))()
 elseif game.PlaceId == 9872472334 or game.PlaceId == 10324346056 or game.PlaceId == 10662542523 or game.PlaceId == 10324347967 or game.PlaceId == 10539706691 or game.PlaceId == 10808838353 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/scripts/Evade.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/evade"))()
 elseif game.PlaceId == 9551640993 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/scripts/MS2.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/miningsim2"))()
 elseif game.PlaceId == 6839171747 or game.PlaceId == 6516141723 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/scripts/Doors.lua"))()
-elseif game.PlaceId == 10675066724 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/scripts/SlimeTycoon.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/door"))()
 elseif table.find(ids, game.PlaceId) then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/scripts/Shindo.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/shindo"))()
 end
