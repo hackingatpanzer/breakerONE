@@ -38,7 +38,7 @@ local ids = {
     6986372023
  }
 if game.PlaceId == 6284583030 or game.PlaceId == 7722306047 or game.PlaceId == 10321372166 or game.PlaceId == 11725212117 then
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/psx"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/psx"))()
 elseif game.PlaceId == 9872472334 or game.PlaceId == 10324346056 or game.PlaceId == 10662542523 or game.PlaceId == 10324347967 or game.PlaceId == 10539706691 or game.PlaceId == 10808838353 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/evade"))()
 elseif game.PlaceId == 9551640993 then
