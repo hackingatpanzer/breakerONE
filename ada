@@ -1,4 +1,4 @@
-local Item = getgenv().amog -- (Must be in the persons store)
+local Item = tostring(getgenv().amog) -- (Must be in the persons store)
 
 local BuyNPC = workspace.NPCs.Manni.Manni -- NPC at Starter Island (Redwood, Redlake what ever its called)
 
