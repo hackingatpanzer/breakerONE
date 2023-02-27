@@ -1,12 +1,9 @@
-local Item = tostring(getgenv().amog) -- (Must be in the persons store)
+local shipwrightName = "Elgfrothi" -- Change name to the town's shipwright name here
 
-local BuyNPC = workspace.NPCs.Manni.Manni -- NPC at Starter Island (Redwood, Redlake what ever its called)
 
-local args = {
-   [1] = BuyNPC,
-   [2] = "{\"Level\":1,\"Name\":\""..Item.."\",\"Amount\":1}",
-   [3] = "",
-   [4] = -1000000
-}
+local args = {[1] = "Sell", [2] = workspace.NPCs[shipwrightName][shipwrightName]}
 
-game:GetService("ReplicatedStorage").RS.Remotes.Misc.BuyItem:InvokeServer(unpack(args))
+
+for i = 1, 9999 do 
+    game:GetService("ReplicatedStorage").RS.Remotes.Misc.Carry:FireServer(unpack(args))
+end
