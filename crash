@@ -1,0 +1,8 @@
+local remote = game:GetService("ReplicatedStorage").RS.Remotes.Misc.ClientReady
+while true do
+   for i = 1, 3 do
+       remote:FireServer()
+   end
+   
+   task.wait()
+end
