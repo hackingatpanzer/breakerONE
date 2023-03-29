@@ -1,7 +1,11 @@
-
+repeat wait() until game:GetService("CoreGui").Rayfield
+game:GetService("CoreGui").Rayfield.Enabled = false
 loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/rfa"))()
+
 coroutine.wrap(function()
 while true do wait(0.5)
 game:GetService("CoreGui").Rayfield.Main.Topbar.Title.Text = "My Restaurant!"
 end
 end)()
+wait(1)
+game:GetService("CoreGui").Rayfield.Enabled = true
