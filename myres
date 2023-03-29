@@ -1,7 +1,7 @@
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/rfa"))()
 coroutine.wrap(function()
 while true do wait(0.5)
 game:GetService("CoreGui").Rayfield.Main.Topbar.Title.Text = "My Restaurant!"
 end
 end)()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hackingatpanzer/breakerONE/main/rfa"))()
