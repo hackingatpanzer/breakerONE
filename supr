@@ -1,0 +1,72 @@
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = false
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(g:GetDescendants()) do
+    if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    end
+end
+
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["__THINGS"].BAKERIES[game.Players.LocalPlayer.Name].Floor1.DefaultFloor.CFrame
+
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+
+    if  v.Name == "Walls" or v.Name == "__MAP" or v.Name == "__DEBRIS" or v.Name == "SpaceShipForDooDooDavid" then
+        v:destroy()
+    end
+end
+
+
+
+
+for i,v in pairs(game:GetService("Workspace")["__THINGS"]:GetChildren()) do
+    if v.Name == "NPC" or v.Name == "GRIDLINES" or v.Name == "LOCATIONS" or v.Name == "FANART" or v.Name == "SIGNS" or v.Name == "BILLBOARDS" or v.Name == "STATUES" or v.Name == "BUTTONS" or v.Name == "AUCTION_SPOTS" or v.Name == "STORE"  then
+        v:Destroy()
+    end
+end
+
+
+for i,v in pairs(game:GetService("Workspace")["__THINGS"].BAKERIES:GetChildren()) do
+    if i>1 then
+        v:Destroy()
+    end
+end
+
+
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+
+    if  v:IsA("Model") and v.Name ~=  game.Players.LocalPlayer.Name then
+        v:destroy()
+    end
+end
+
+for i, e in pairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
